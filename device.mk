@@ -57,3 +57,6 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/sony/pdx215/pdx215-vendor.mk)
+
+# GMS
+$(call inherit-product-if-exists, vendor/pixel/gms/products/gms.mk)
