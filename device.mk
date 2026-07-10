@@ -40,13 +40,35 @@ PRODUCT_PACKAGES += \
 # Overlays
 PRODUCT_PACKAGES += \
     SonyPDX215SystemUIRes \
+    SonyPDX215NfcNciRes \
     SonyPDX215FrameworksRes
 
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
+PRODUCT_PACKAGES += \
+    AviumUseful \
+    AviumSystemUITools
+
+PRODUCT_PACKAGES += \
+    Fcitx5
+
+PRODUCT_PACKAGES += \
+    OpenEUICC
+
+PRODUCT_PACKAGES += \
+    PrebuiltXMSF
+
+PRODUCT_PACKAGES += \
+    TrichromeLibraryDualArch \
+    TrichromeWebViewDualArch \
+    TrichromeChromeDualArch \
+    VanadiumConfig
+
 # NFC
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/nfc/libese-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libese-nxp.conf \
+    $(LOCAL_PATH)/nfc/libnfc-nxp_RF.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp_RF.conf \
     $(LOCAL_PATH)/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
     $(LOCAL_PATH)/nfc/libnfc-nxp-typef.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp-typef.conf \
     $(LOCAL_PATH)/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf

@@ -31,14 +31,50 @@ PRODUCT_NAME := lineage_pdx215
 PRODUCT_DEVICE := pdx215
 PRODUCT_MANUFACTURER := Sony
 PRODUCT_BRAND := Sony
-PRODUCT_MODEL := Xperia 1 III
+PRODUCT_MODEL := XQ-BC52
 
 PRODUCT_GMS_CLIENTID_BASE := android-sonymobile
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="XQ-BC72-user 13 61.2.A.0.472A 061002A0000472A0046651803 release-keys" \
-    BuildFingerprint=Sony/XQ-BC72/XQ-BC72:13/61.2.A.0.472A/061002A0000472A0046651803:user/release-keys \
-    DeviceName=XQ-BC72 \
-    DeviceProduct=XQ-BC72 \
-    SystemDevice=XQ-BC72 \
-    SystemName=XQ-BC72
+    BuildDesc="XQ-BC52-user 13 61.2.A.0.472A 061002A0000472A0046651803 release-keys" \
+    BuildFingerprint=Sony/XQ-BC52/XQ-BC52:13/61.2.A.0.472A/061002A0000472A0046651803:user/release-keys \
+    DeviceName=XQ-BC52 \
+    DeviceProduct=XQ-BC52 \
+    SystemDevice=XQ-BC52 \
+    SystemName=XQ-BC52
+
+TARGET_ENABLE_BLUR := false
+
+TARGET_INCLUDE_AXFX := true
+
+TARGET_INCLUDES_LOS_PREBUILTS := true
+
+# Camera information (multiple sensors supported)
+AXION_CAMERA_REAR_INFO := 12,12,12
+AXION_CAMERA_FRONT_INFO := 8
+
+# Maintainer name (underscores become spaces in the UI)
+AXION_MAINTAINER := NullW06
+
+# Processor name (underscores become spaces)
+AXION_PROCESSOR := Snapdragon_Oryon
+
+# Charging
+BYPASS_CHARGE_SUPPORTED := true
+# Path for charge toggle
+BYPASS_CHARGE_TOGGLE_PATH := /sys/class/battchg_ext/smart_charging_interruption
+
+# High Brightness Mode (HBM)
+HBM_SUPPORTED := true
+HBM_NODE := /sys/devices/dsi_panel_driver/hbm_mode
+
+# CPU governor support
+PERF_GOV_SUPPORTED := true
+PERF_DEFAULT_GOV := schedutil
+PERF_ANIM_OVERRIDE := false
+
+# doze gestures
+TARGET_DOZE_TAP_PULSE_SUPPORTED := true
+TARGET_DOZE_DOUBLE_TAP_PULSE_SUPPORTED := false
+TARGET_DOZE_PICKUP_PULSE_SUPPORTED := true
+TARGET_DOZE_SIDE_FPS_PULSE_SUPPORTED := false

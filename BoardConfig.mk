@@ -41,3 +41,7 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # inherit from the proprietary version
 -include vendor/sony/pdx215/BoardConfigVendor.mk
+
+# Use fixed timestamp (2009-01-01 UTC) for files in IMG partition images
+# for reproducible builds. (b/24377993, b/80600931)
+USE_FIXED_TIMESTAMP_IMG_FILES := true
